@@ -1,6 +1,8 @@
 const router = require('express').Router();
-
 const apiRoutes = require('./api');
+const homeRoutes = require('./home-routes.js');
+
+router.use('/', homeRoutes);
 
 // collecting the packaged group of API endpoints and prefixing them with the path /api
 router.use('/api', apiRoutes);
